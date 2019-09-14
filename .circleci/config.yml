@@ -20,3 +20,6 @@ jobs:
       - run:
           name: build
           command: npm run build
+      - run:
+          name: deploy
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project=$FIREBASE_PROJECT
